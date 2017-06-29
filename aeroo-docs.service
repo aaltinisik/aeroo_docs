@@ -1,0 +1,14 @@
+[Unit]
+Description=aeroo-docs
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/opt/aeroo/aeroo_docs/aeroo-docs start
+ExecStop=/opt/aeroo/aeroo_docs/aeroo-docs stop
+User=root
+WorkingDirectory=/opt/aeroo/aeroo_docs/aeroo-docs
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
